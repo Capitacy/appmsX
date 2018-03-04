@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>APPMS - Version 2</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="static/css/signin.css" rel="stylesheet">
+
+    <!-- jQuery Plugin -->
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid">
+
+        <form method="POST" class="form-signin">
+            <h2 class="form-signin-heading">--- APPMS <b>X</b> ---</h2>
+            <p>Browsing past papers and mark schemes for Cambridge International A-Level made simple.</p>
+
+            <label for="code" class="sr-only">Syllabus Code</label>
+            <input type="number" id="code" class="form-control" placeholder="Syllabus Code" required min="8000" max="9999" minlength="4" maxlength="4">
+            <label for="year" class="sr-only">Year</label>
+            <input type="number" id="year" class="form-control" placeholder="Year" minlength="4" maxlength="4" min="2000">
+            <label for="session" class="sr-only">Session</label>
+            <select type="text" id="session" class="form-control" placeholder="Session">
+                <option value="d">---Choose --</option>
+                <option value="s">Summer</option>
+                <option value="w">Winter</option>
+            </select>
+            <label for="type" class="sr-only">Paper Type</label>
+            <select type="text" id="type" class="form-control" placeholder="Paper Type">
+                <option value="d">---Choose --</option>
+                <option value="qp">Question Paper</option>
+                <option value="ms">Mark Scheme</option>
+            </select>
+            <label for="num" class="sr-only">Paper Number</label>
+            <input type="number" id="num" class="form-control" placeholder="Paper Number" maxlength="1">
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+        </form>
+
+        <!--
+        <% if (result.length !== 0) {%>
+            <div class="links">
+                <ul>
+                    <% result.forEach(function(lnk){ %>
+                        <%- include('link', {link: lnk}) %>
+                    <% }); %>
+                </ul>
+            </div>
+        <% } %>-->
+
+        <div class="loader hidden">
+            <img src="static/img/loader.gif" alt="loader">
+        </div>
+
+        <div class="links">
+            <ul class="links-container">
+            </ul>
+        </div>
+
+        <footer>
+            <p>Developed by: <a target="_blank" href="//pgrg.pythonanywhere.com">Prashant Gurung</a></p>
+            <p>Revised and redesigned by: <a target="_blank" href="//thisisoshan.github.io/v2">Oshan Shrestha</a></p>
+        </footer>
+
+    </div> <!-- /container -->
+  
+  
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="static/js/ie10-viewport-bug-workaround.js"></script>
+    
+    <!-- Core custom js for all event initiations and data handling -->
+    <script src="static/js/handlers.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "appms-v2",
+  "version": "0.0.1",
+  "description": "revised version of appms",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app",
+    "start": "nodemon"
+  },
+  "author": "Oshan Shrestha",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "request": "^2.83.0"
+  }
+}

@@ -1,0 +1,82 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.form-signin-heading {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.form-signin p {
+  margin-bottom: 10px;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="number"], select {
+  margin: 10px 0;
+}
+
+
+.loader {
+  width: 100px;
+  margin: 0 auto;
+}
+.loader img {
+  height: 100%;
+  width: auto;
+}
+.visible {
+  height: 100px;
+}
+.hidden {
+  height: 0px;
+}
+
+
+
+.links {
+  max-width: 720px;
+  margin: 30px auto;
+  padding: 0 30px;
+}
+.links-container {
+  padding: 0;
+}
+li {
+  list-style: none;
+  min-height: 30px;
+  width: 100%;
+  background: #fff;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #4444;
+}
+li a {
+  display: block;
+  font-size: 16px;
+}
+
+
+
+
+footer {
+  text-align: center;
+}
