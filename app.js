@@ -23,7 +23,8 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 // render main page for request made on "/" page
 app.get("/", function(req, res){
-    res.render("index", {result: ""})
+    // res.render("index", {result: ""})
+    res.render("maintainence")
     console.log("GET request made on '/'")
 })
 

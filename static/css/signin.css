@@ -80,3 +80,11 @@ li a {
 footer {
   text-align: center;
 }
+
+
+.maintainence {
+  text-align: left;
+  font-size: 22px;
+  font-family: 'Slabo 27px', serif;
+  margin-top: 80px;
+}
