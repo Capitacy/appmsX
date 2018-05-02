@@ -23,8 +23,8 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 // render main page for request made on "/" page
 app.get("/", function(req, res){
-    // res.render("index", {result: ""})
-    res.render("maintainence")
+    res.render("index", {result: ""})
+    // res.render("maintainence")
     console.log("GET request made on '/'")
 })
 
@@ -32,10 +32,9 @@ app.get("/", function(req, res){
 // handle POST requests
 app.post("/", urlencodedParser, function(req, res) {
     console.log("POST request made on '/'")
-    manager.fetchSubjectLink(req.body.code, function(data) {
-        manager.fetchPaperLinks(data[0], function(result) {
-            result.push(req.body)
-            console.log(result)
+    manager.fetchSubjectLink(req.body.code, function(data, subID) {
+        manager.fetchPaperLinks(data[0], req.body, subID, function(result) {
+            // console.log(result)
             res.json(result)
         })
     })

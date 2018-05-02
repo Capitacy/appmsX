@@ -21,36 +21,36 @@ var parser = {
         return tags
     },
     getLinks: function(tag, code, callback) {
-        tag = String(tag)
         var link = ""
 
         for (let index = 0; index < tag.length; index++) {
             if (tag.substr(index, 4) == "href") {
                 index = index + 6
-                while (tag.substr(index, 1) !== '"') {
+                while (tag.substr(index, 2) !== "\'" & tag.substr(index, 1) !== "'" & tag.substr(index, 1) !== '"') {
                     link += tag.substr(index, 1)
                     index++
                 }
             }
         }
+        // console.log(link)
         if (validate.isValidSubjectLink(link, code)) {
             callback(link)
         }
     },
-    getPDFs: function(tag, callback) {
+    getPDFs: function(tag, filterData, callback) {
         tag = String(tag)
         var link = ""
 
         for (let index = 0; index < tag.length; index++) {
             if (tag.substr(index, 4) == "href") {
                 index = index + 6
-                while (tag.substr(index, 1) !== '"') {
+                while (tag.substr(index, 2) !== "\'" & tag.substr(index, 1) !== "'" & tag.substr(index, 1) !== '"') {
                     link += tag.substr(index, 1)
                     index++
                 }
             }
         }
-        if (validate.isValidPaperLink(link)) {
+        if (validate.isValidPaperLink(link, filterData)) {
             callback(link)
         }
     }
