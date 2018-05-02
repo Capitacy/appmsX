@@ -37,7 +37,7 @@ var manager = {
                     links.forEach(url => {
                         url = url.toString().substr(url.indexOf("/" + filterData.code) + 1)
                         if (filter.year(url, filterData.year)) {
-                            validLinks.push(url)
+                            validLinks.push("https://papers.gceguide.com/A Levels/" + subID + "/" + url)
                         }
                     })
                     links = validLinks
@@ -47,7 +47,7 @@ var manager = {
                     links.forEach(url => {
                         url = url.toString().substr(url.indexOf("/" + filterData.code) + 1)
                         if (filter.session(url, filterData.session)) {
-                            validLinks.push(url)
+                            validLinks.push("https://papers.gceguide.com/A Levels/" + subID + "/" + url)
                         }
                     })
                     links = validLinks
@@ -57,7 +57,7 @@ var manager = {
                     links.forEach(url => {
                         url = url.toString().substr(url.indexOf("/" + filterData.code) + 1)
                         if (filter.ptype(url, filterData.type)) {
-                            validLinks.push(url)
+                            validLinks.push("https://papers.gceguide.com/A Levels/" + subID + "/" + url)
                         }
                     })
                     links = validLinks
@@ -67,7 +67,7 @@ var manager = {
                     links.forEach(url => {
                         url = url.toString().substr(url.indexOf("/" + filterData.code) + 1)
                         if (filter.paper(url, filterData.num)) {
-                            validLinks.push(url)
+                            validLinks.push("https://papers.gceguide.com/A Levels/" + subID + "/" + url)
                         }
                     })
                     links = validLinks
