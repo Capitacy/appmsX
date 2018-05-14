@@ -1,4 +1,12 @@
 $(document).ready(function() {
+
+  $('.clear-btn button').on('click', function(e) {
+    e.preventDefault()
+    $('.clear-btn').css('display', 'none')
+    $('.links-container').html("")
+  })
+
+
     $('form').on('submit', function(e) {
         e.preventDefault()
 
@@ -43,9 +51,11 @@ $(document).ready(function() {
         var tag = ""
         if (links.length == 1) {
             tag = "<h3>" + links.length + " link found.</h3>" + tag
+            $('.clear-btn').css('display', 'block')
         } else if (links.length == 0) {
             tag = "<h3>Sorry, nothing found.</h3>"
         } else {
+            $('.clear-btn').css('display', 'block')
             tag = "<h3>" + links.length + " links found.</h3>" + tag
         }
         tags += tag
