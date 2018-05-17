@@ -4,6 +4,12 @@ $(document).ready(function() {
     e.preventDefault()
     $('.clear-btn').css('display', 'none')
     $('.links-container').html("")
+    
+    $('#code').val('')
+    $('#year').val('')
+    $('#session').val('d')
+    $('#type').val('d')
+    $('#num').val('')
   })
 
 
