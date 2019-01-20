@@ -56,13 +56,13 @@ $(document).ready(function() {
         var tags = ""
         var tag = ""
         if (links.length == 1) {
-            tag = "<h3>" + links.length + " link found.</h3>" + tag
+            tag = "<h3>" + links.length + " link.</h3>" + tag
             $('.clear-btn').css('display', 'block')
         } else if (links.length == 0) {
             tag = "<h3>Sorry, nothing found.</h3>"
         } else {
             $('.clear-btn').css('display', 'block')
-            tag = "<h3>" + links.length + " links found.</h3>" + tag
+            tag = "<h3>" + links.length + " links.</h3>" + tag
         }
         tags += tag
         links.forEach(item => {
